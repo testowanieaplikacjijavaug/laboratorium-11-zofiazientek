@@ -64,6 +64,7 @@ public class TestZad3 {
 
     @Test
     public void goToFacebook() {
+        //Element zawiera określony tekst:  textToBePresentInElement(By locator, String text)
         wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.cssSelector("#social_block > h4")),"Follow us"));
         driver.findElement(By.cssSelector("#social_block > ul > li.facebook > a")).click();
         List<String> browserTabs = new ArrayList<String>(driver.getWindowHandles());
