@@ -19,7 +19,10 @@ public class TestZad4 {
     {
         this.driver = driver;
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.MILLISECONDS);
+        //pageLoadTimeout() - ograniczenie czasu na załadowanie strony
         driver.manage().timeouts().setScriptTimeout(1, TimeUnit.SECONDS);
+        //setScriptTimeout() - ograniczenie czasu na wykonanie asynchronicznego skryptu zanim wyrzucony będzie error;
+        // jeśli czas będzie ujemny, skrypt będzie mógł działać w nieskończoność
     }
 
 
@@ -27,11 +30,6 @@ public class TestZad4 {
     public static void tearDown() throws Exception {
         driver.quit();
     }
-
-
-//pageLoadTimeout() - ograniczenie czasu na załadowanie strony
-//setScriptTimeout() - ograniczenie czasu na wykonanie asynchronicznego skryptu zanim wyrzucony będzie error;
-// jeśli czas będzie ujemny, skrypt będzie mógł działać w nieskończoność
 
     @Test
     public void longPageLoad(){
