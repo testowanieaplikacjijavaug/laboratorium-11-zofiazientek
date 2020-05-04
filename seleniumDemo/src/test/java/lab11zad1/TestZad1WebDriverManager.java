@@ -20,9 +20,7 @@ public class TestZad1WebDriverManager {
     @BeforeAll
     public static void setUpDriver(){
         WebDriverManager.chromedriver().setup();
-        //System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
-        // Implicity wait -> max czas na znalezienie elementu na stronie
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
